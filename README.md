@@ -1,18 +1,24 @@
 # Français en famille — parcours A1
 
-Premier prototype d’une application mobile de français pour les parents. Les activités s’appuient sur des situations concrètes de la vie quotidienne et de l’école.
+Prototype d’un parcours de français destiné aux parents, construit autour d’une situation concrète : comprendre un message de l’école, répondre à l’oral et écrire une réponse courte.
 
-Cette première version est en français uniquement. Les aides dans les langues des parents pourront être ajoutées et vérifiées au fil du développement.
+## Logique pédagogique
 
-## Contenu du prototype
+Le parcours suit une démarche d’action : un bilan bref sans indices, quatre étapes d’entraînement (lecture, écoute, interaction orale et écriture), puis une mission de transfert avec de nouveaux messages. Les objectifs sont annoncés avant chaque activité. En entraînement, une première erreur donne un indice ; le bilan final ne donne pas d’indice avant l’enregistrement du résultat.
 
-- un bilan de départ en compréhension, expression orale, lecture et écriture ;
-- quatre activités courtes, une par compétence ;
-- des retours immédiats, des modèles et des aides à l’écoute ;
-- un carnet de progression qui conserve le premier et le dernier bilan ;
-- un enregistrement local dans le navigateur, sans compte ni envoi de réponses.
+Les bilans de départ et final reprennent les mêmes objectifs avec des situations parallèles. La lecture et l’écoute sont comptées selon la première réponse choisie. L’oral et l’écrit sont documentés par l’autoévaluation du parent ; l’application ne reconnaît pas la parole et ne corrige pas les textes. Les deux productions écrites restent consultables côte à côte et peuvent être montrées à un accompagnateur pour un retour humain.
 
-Le résultat donne un repère de travail. Il ne constitue pas une certification ni une évaluation officielle du niveau A1.
+Cette organisation s’inspire des descripteurs du CECR, qui peuvent aider à définir des objectifs, structurer une suite d’activités et suivre les apprentissages. Le résultat constitue un repère de travail, pas une certification ni une mesure suffisante du niveau A1. Pour conclure à une progression, il faut multiplier les situations et associer un retour d’un accompagnateur, en particulier pour l’expression orale et écrite.
+
+## Contenu
+
+- Un bilan de départ et une mission finale de transfert.
+- Quatre activités courtes avec objectifs, exemples, indices gradués et retours explicatifs.
+- Une écoute par synthèse vocale française, avec transcription révélée après les réponses.
+- Un tableau de suivi par compétence et une comparaison des productions écrites.
+- Un stockage dans le navigateur, sans compte ni envoi des réponses à un serveur.
+
+La version actuelle est entièrement en français. Les aides dans les langues des parents devront être ajoutées et vérifiées dans une prochaine étape.
 
 ## Tester ou publier
 
