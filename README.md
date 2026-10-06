@@ -16,9 +16,10 @@ Cette organisation s’inspire des descripteurs du CECR, qui peuvent aider à d�
 - Quatre activités courtes avec objectifs, exemples, indices gradués et retours explicatifs.
 - Une écoute par synthèse vocale française, avec transcription révélée après les réponses.
 - Un tableau de suivi par compétence et une comparaison des productions écrites.
+- Un choix de langue d’appui conservé sur l’appareil.
 - Un stockage dans le navigateur, sans compte ni envoi des réponses à un serveur.
 
-La version actuelle est entièrement en français. Les aides dans les langues des parents devront être ajoutées et vérifiées dans une prochaine étape.
+Le français reste la langue de travail. Pendant les quatre étapes d’entraînement, une explication facultative peut être affichée en albanais, arabe, arménien, géorgien, pachto, turc ou ukrainien. Son ouverture marque l’activité comme réalisée avec une aide linguistique. Les bilans de départ et la mission finale restent en français et sans traduction afin de préserver des conditions de comparaison communes. Ces formulations traduites sont à relire avec des parents tuteurs avant un usage plus large.
 
 ## Tester ou publier
 
