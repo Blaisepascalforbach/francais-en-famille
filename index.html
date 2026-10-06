@@ -59,7 +59,7 @@
 </div>
 <script>
   const STORAGE_KEY='francais-famille-a1-v2';
-  const state=loadState();
+  let state;
   let currentView='home', previousView='home', currentStage=0, assessmentKind='baseline', assessmentResponses={};
   const readingText={baseline:'Madame Diallo vous écrit : « La réunion des parents aura lieu mardi 10 novembre à 17 h, dans la salle 8. Merci de confirmer votre présence avant lundi. »',practice:'Bonjour, la réunion de rentrée aura lieu vendredi 13 novembre à 9 h, dans la salle 12. Merci de répondre pour dire si vous serez présent.',final:'Le secrétariat vous écrit : « La rencontre avec la maîtresse aura lieu jeudi 19 novembre à 16 h, dans la salle 3. Merci de confirmer votre présence avant mardi. »'};
   const listeningText={baseline:'Bonjour, c’est le secrétariat. La réunion avec la maîtresse aura lieu mercredi 11 novembre à 16 h 30, dans la salle 4. Pouvez-vous confirmer votre présence ?',practice:'Bonjour, ici la vie scolaire. Le rendez-vous avec madame Leroy aura lieu mardi 17 novembre à 16 h, dans la salle 7. Pouvez-vous confirmer votre présence ?',final:'Bonjour, c’est le secrétariat. Le rendez-vous avec le professeur aura lieu vendredi 20 novembre à 15 h, dans la salle 6. Pouvez-vous confirmer votre présence ?'};
@@ -86,6 +86,7 @@
   ];
   const initialState={baseline:null,final:null,stageResults:{},stageDone:{}};
   function loadState(){try{return {...initialState,...JSON.parse(localStorage.getItem(STORAGE_KEY)||'{}')}}catch{return {...initialState}}}
+  state=loadState();
   function saveState(){localStorage.setItem(STORAGE_KEY,JSON.stringify(state));renderProgress()}
   function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
   function supportPanel(key){if(supportLanguage==='fr')return '';const d=languageSupport[supportLanguage];if(!d)return '';return `<section class="support-card"><p class="eyebrow">Appui facultatif · ${esc(d.name)}</p><p class="muted small">Lisez d’abord le message en français. Ouvrez cette explication si elle vous aide. Le français reste le texte de référence ; votre parent tuteur ou formateur peut vous aider à vérifier le sens. L’activité sera alors repérée comme réalisée avec une aide linguistique.</p><button class="button ghost small-btn" type="button" data-support-toggle="${key}" aria-expanded="false">Voir l’explication en ${esc(d.name)}</button><div class="support-text hidden" id="support-${key}" lang="${supportLanguage}" dir="${d.dir}">${esc(d[key])}</div></section>`}
